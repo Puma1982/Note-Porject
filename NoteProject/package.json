@@ -1,4 +1,15 @@
 {
+  "name": "noteproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "connect-mongo": "^5.0.0",
     "dotenv": "^16.0.3",

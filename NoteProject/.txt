@@ -1,0 +1,1 @@
+ npm i connect-mongo dotenv ejs express express-ejs-layouts express-session method-override mongoose passport passport-google-oauth20
