@@ -12,7 +12,11 @@ exports.about = async (req,res) => {
         title: "About NoteNotes",
         description: "Free NoteNotes app.",
 };
-res.render('about', locals);
+res.render('about', {
+  locals,
+  layout:'../views/layouts/front-page'
+
+ });
 }
 
 
