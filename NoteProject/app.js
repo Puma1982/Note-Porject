@@ -18,13 +18,6 @@ app.use(expressLayouts);
 app.set('layout', './layouts/main');
 app.set('view engine', 'ejs');
 
-/*app.get('/', function (req, res) {
-    const locals = {
-        title: 'NoteNotes',
-        description: 'Free Note App'
-    }
-    res.render('index',locals);
-});*/
 
 //ROUTES
 

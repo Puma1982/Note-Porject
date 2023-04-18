@@ -1,0 +1,31 @@
+:root {
+
+   --background-color:var(--background-color) ;
+   --bs-primary-rgb:#A8A8A8 ;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif ;
+    background-color: var(--background-color);
+    color: var(--bs-primary-rgb);
+    font-weight: 300;
+    font-size: 1.5rem;
+    background-image: url(../img/noise.png);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    
+    font-family: 'Unbounded' cursive;
+    font-weight : 800;
+}
+.container-fluid-custom {
+    max-width: 1600px;
+}
+
+/*BUTTONS*/
+.btn{
+  padding-left: 0.9rem;
+    padding-right: 1.5rem;
+    border-radius: 2rem;
+}
