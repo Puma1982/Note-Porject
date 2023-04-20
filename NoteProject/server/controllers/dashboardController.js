@@ -1,12 +1,12 @@
 /**GET DASHBOARD */
-exports.dashboard = async (req,res) => {
+exports.dashboard = async (req, res) => {
     const locals = {
         title: "Dashboard",
-        description: "Free NoteNotes app.",
-}
-res.render('dashboard/index',{
-    locals,
-    layout: '../views/layouts/dashboard'
+        description: "Free NodeJS Notes App.",
+      };
+      res.render('dashboard/index', {
+        locals,
+        layout: "../views/layouts/dashboard",
 });
 }
 
