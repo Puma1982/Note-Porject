@@ -33,8 +33,8 @@ h1,h2,h3,h4,h5,h6 {
   --bs-btn-bg: var(--bs-primary-rgb);
   --bs-btn-border-color: var(--bs-primary-rgb);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0043a8;
-  --bs-btn-hover-border-color: #0043a8;
+  --bs-btn-hover-bg:  #FFA500;
+  --bs-btn-hover-border-color:  #FFA500;
   --bs-btn-focus-shadow-rgb: 49,132,253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--bs-primary-rgb);
@@ -49,8 +49,8 @@ h1,h2,h3,h4,h5,h6 {
   --bs-btn-color: var(--bs-primary-rgb);
   --bs-btn-border-color: var(--bs-primary-rgb);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #0043a8;
-  --bs-btn-hover-border-color: #0043a8;
+  --bs-btn-hover-bg:  #FFA500;
+  --bs-btn-hover-border-color:  #FFA500;
   --bs-btn-focus-shadow-rgb: 13,110,253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--bs-primary-rgb);

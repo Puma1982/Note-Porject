@@ -1,18 +1,15 @@
 const express = require('express');
 const router = express.Router();
-<<<<<<< Updated upstream
-const { isLoggedIn } = require('../middleware/checkAuth');
-const dashboardController = require('../controllers/dashboardController');
-=======
+
 const dashboardController = require('../controllers/dashboardController');
 
->>>>>>> Stashed changes
+
 
 /**
  * Dashboard Routes
  */
- router.get('/dashboard', isLoggedIn, dashboardController.dashboard);
+router.get('/dashboard',dashboardController.dashboard);
 
 
 
- module.exports = router;
+module.exports = router;
