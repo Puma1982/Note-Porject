@@ -21,7 +21,7 @@ passport.use(
       };
 
       try {
-        let user = await User.findOne({ googleId: profile.id });
+        let user = await User.findOne({googleId: profile.id});
         if (user) {
           done(null, user);
         } else {
@@ -35,7 +35,7 @@ passport.use(
   )
 );
 
-// Google Login Route
+// LOGIN ROUTE FROM YOUR GOOGLE CONTO
 router.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["email", "profile"] })
@@ -52,7 +52,7 @@ router.get(
 
 // Route if something goes wrong
 router.get('/login-failure', (req, res) => {
-  res.send('Something went wrong...');
+  res.send('Username or Password went wrong...');
 });
 
 // Destroy user session
@@ -60,7 +60,7 @@ router.get('/logout', (req, res) => {
   req.session.destroy(error => {
     if(error) {
       console.log(error);
-      res.send('Error loggin out');
+      res.send('Error logging out');
     } else {
       res.redirect('/')
     }
