@@ -1,15 +1,54 @@
 exports.isLoggedIn = function (req, res, next) {
-    if(req.user) {
+    if (req.user) {
       next();
     } else {
-        let message = 'Sorry! You are not allowed to access the dashboard!';
-        let repeatedMessage = '';
-        for (let i = 0; i < 300; i++) {
-          repeatedMessage += message;
-        }
-        
-        res.status(401).send('<div style="color: red; font-weight: bold;"><img src="./public/template.mp4" style="width: 100px;"><br>' + repeatedMessage + '</div>');
-        
-
+      let message = 'Sorry! You are not allowed to access the dashboard!';
+      let repeatedMessage = '<div style="font-size: 50px; line-height: 1.5em;">';
+      for (let i = 0; i < 50; i++) {
+        repeatedMessage += message;
+      }
+      res.status(401).send(`
+        <style>
+          .marquee {
+            width: 100%;
+            margin: 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-align: center;
+            box-sizing: border-box;
+          }
+  
+          .marquee span {
+            display: inline-block;
+            padding-right: 100%;
+            animation: marquee 100s linear infinite;
+          }
+  
+          @keyframes marquee {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+        </style>
+  
+        <div style="color: red; font-weight: bold; position: relative;">
+        <video autoplay loop play-inline muted background-image>
+          <source type="video/mp4" src="video/template2.mp4">
+        </video>
+        <div class="marquee">
+          <span>${repeatedMessage}</span>
+        </div>
+      </div>
+      
+      `);
     }
   }
+  /** 
+   * WITH BUTTONS
+      res.status(401).send('<div style="color: red; font-weight: bold;">  <video autoplay loop play-inline muted controls>  <source type="video/mp4" src="video/template2.mp4"></video><br>' + repeatedMessage + '</div>');
+
+    }
+  } */
