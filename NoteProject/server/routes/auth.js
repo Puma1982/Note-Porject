@@ -21,7 +21,7 @@ passport.use(
       };
 
       try {
-        let user = await User.findOne({googleId: profile.id});
+        let user = await User.findOne({ googleId: profile.id });
         if (user) {
           done(null, user);
         } else {
@@ -58,7 +58,7 @@ router.get('/login-failure', (req, res) => {
 // Destroy user session
 router.get('/logout', (req, res) => {
   req.session.destroy(error => {
-    if(error) {
+    if (error) {
       console.log(error);
       res.send('Error logging out');
     } else {

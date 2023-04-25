@@ -2,7 +2,7 @@ exports.isLoggedIn = function (req, res, next) {
     if (req.user) {
       next();
     } else {
-      let message = 'Sorry! You are not allowed to access the dashboard!';
+      let message = 'Sorry! You are not allowed to access this dashboard!';
       let repeatedMessage = '<div style="font-size: 50px; line-height: 1.5em;">';
       for (let i = 0; i < 50; i++) {
         repeatedMessage += message;
@@ -35,9 +35,6 @@ exports.isLoggedIn = function (req, res, next) {
         </style>
   
         <div style="color: red; font-weight: bold; position: relative;">
-        <video autoplay loop play-inline muted background-image>
-          <source type="video/mp4" src="video/template2.mp4">
-        </video>
         <div class="marquee">
           <span>${repeatedMessage}</span>
         </div>
