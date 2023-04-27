@@ -55,7 +55,7 @@ router.get('/login-failure', (req, res) => {
   res.send('Username or Password went wrong...');
 });
 
-// Destroy user session
+// Logout
 router.get('/logout', (req, res) => {
   req.session.destroy(error => {
     if (error) {
