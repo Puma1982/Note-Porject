@@ -11,7 +11,6 @@ const MongoStore = require('connect-mongo');
 const app = express();
 const port = 5000 || process.env.PORT;
 
-//COOKIES (INSPECT-APP-COOKIES)
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
