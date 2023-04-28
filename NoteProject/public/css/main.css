@@ -2,17 +2,23 @@
   --background-color: #020202;
   --bs-primary-rgb: #fff;
 }
+.page-link {
+  color: black;
+}
 
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--background-color);
-  color: var(--bs-primary-rgb);
+  color: var(--background-color);
   font-weight: 300;
   font-size: 1.2rem;
 
 }
 
-h1,
+h1,h3,h4{
+  color: #FFFFFF; /* Replace with your preferred white color code */
+}
+
 h2,
 h3,
 h4,
@@ -34,7 +40,7 @@ h6 {
 }
 
 .btn-primary {
-  --bs-btn-color: #fff;
+  --bs-btn-color: #020202;
   --bs-btn-bg: var(--bs-primary-rgb);
   --bs-btn-border-color: var(--bs-primary-rgb);
   --bs-btn-hover-color: #fff;
@@ -57,7 +63,7 @@ h6 {
   --bs-btn-hover-bg: #FFA500;
   --bs-btn-hover-border-color: #FFA500;
   --bs-btn-focus-shadow-rgb: 13, 110, 253;
-  --bs-btn-active-color: #fff;
+  --bs-btn-active-color:#dc3545;
   --bs-btn-active-bg: var(--bs-primary-rgb);
   --bs-btn-active-border-color: var(--bs-primary-rgb);
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
