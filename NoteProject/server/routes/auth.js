@@ -35,7 +35,7 @@ passport.use(
   )
 );
 
-// LOGIN ROUTE FROM YOUR GOOGLE CONTO
+// Google Login Route
 router.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["email", "profile"] })
@@ -52,15 +52,15 @@ router.get(
 
 // Route if something goes wrong
 router.get('/login-failure', (req, res) => {
-  res.send('Username or Password went wrong...');
+  res.send('Something went wrong...');
 });
 
-// Logout
+// Destroy user session
 router.get('/logout', (req, res) => {
   req.session.destroy(error => {
-    if (error) {
+    if(error) {
       console.log(error);
-      res.send('Error logging out');
+      res.send('Error loggin out');
     } else {
       res.redirect('/')
     }
@@ -74,6 +74,7 @@ passport.serializeUser(function (user, done) {
 });
 
 // Retrieve user data from session.
+
 passport.deserializeUser(async (id, done) => {
   try {
     const user = await User.findById(id);
@@ -82,8 +83,6 @@ passport.deserializeUser(async (id, done) => {
     done(err, null);
   }
 });
-
-
 
 
 

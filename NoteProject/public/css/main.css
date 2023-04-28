@@ -12,7 +12,12 @@ body {
 
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Unbounded', cursive;
   font-weight: 800;
 }
@@ -33,9 +38,9 @@ h1,h2,h3,h4,h5,h6 {
   --bs-btn-bg: var(--bs-primary-rgb);
   --bs-btn-border-color: var(--bs-primary-rgb);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg:  #FFA500;
-  --bs-btn-hover-border-color:  #FFA500;
-  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-hover-bg: #FFA500;
+  --bs-btn-hover-border-color: #FFA500;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--bs-primary-rgb);
   --bs-btn-active-border-color: var(--bs-primary-rgb);
@@ -49,9 +54,9 @@ h1,h2,h3,h4,h5,h6 {
   --bs-btn-color: var(--bs-primary-rgb);
   --bs-btn-border-color: var(--bs-primary-rgb);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg:  #FFA500;
-  --bs-btn-hover-border-color:  #FFA500;
-  --bs-btn-focus-shadow-rgb: 13,110,253;
+  --bs-btn-hover-bg: #FFA500;
+  --bs-btn-hover-border-color: #FFA500;
+  --bs-btn-focus-shadow-rgb: 13, 110, 253;
   --bs-btn-active-color: #fff;
   --bs-btn-active-bg: var(--bs-primary-rgb);
   --bs-btn-active-border-color: var(--bs-primary-rgb);
@@ -80,7 +85,3 @@ video {
   height: 100%;
   object-fit: fill;
 }
-
-
-
-

@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
  * GET /
  * Dashboard
  */
-exports.dashboard = async (req, res) => {
+ exports.dashboard = async (req, res) => {
 
   let perPage = 12;
   let page = req.query.page || 1;
@@ -16,6 +16,7 @@ exports.dashboard = async (req, res) => {
   };
 
   try {
+    // Mongoose "^7.0.0 Update
     const notes = await Note.aggregate([
       { $sort: { updatedAt: -1 } },
       { $match: { user: new mongoose.Types.ObjectId(req.user.id) } },
@@ -24,11 +25,11 @@ exports.dashboard = async (req, res) => {
           title: { $substr: ["$title", 0, 30] },
           body: { $substr: ["$body", 0, 100] },
         },
-      }
-      ])
+      },
+    ])
     .skip(perPage * page - perPage)
     .limit(perPage)
-    .exec(); 
+    .exec();
 
     const count = await Note.count();
 
@@ -40,7 +41,7 @@ exports.dashboard = async (req, res) => {
       current: page,
       pages: Math.ceil(count / perPage)
     });
-  } catch (error) {
+   } catch (error) {
     console.log(error);
   }
 };
