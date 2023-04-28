@@ -24,4 +24,11 @@ exports.about = async (req, res) => {
     description: "Free NodeJS Notes App.",
   }
   res.render('about', locals);
+},
+exports.features = async (req, res) => {
+  const locals = {
+    title: "Features - NodeJs Notes",
+    description: "Free NodeJS Notes App.",
+  }
+  res.render('features', locals);
 }
