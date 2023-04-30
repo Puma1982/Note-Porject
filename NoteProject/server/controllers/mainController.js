@@ -12,8 +12,6 @@ exports.homepage = async (req, res) => {
     layout: '../views/layouts/front-page'
   });
 }
-
-
 /**
  * GET /
  * About 
@@ -31,4 +29,11 @@ exports.features = async (req, res) => {
     description: "Free NodeJS Notes App.",
   }
   res.render('features', locals);
+},
+exports.time = async (req, res) => {
+  const locals = {
+    title: "Time - NodeJs Notes",
+    description: "Free NodeJS Notes App.",
+  }
+  res.render('time', locals);
 }

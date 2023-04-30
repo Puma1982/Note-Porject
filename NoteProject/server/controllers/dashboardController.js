@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
  */
  exports.dashboard = async (req, res) => {
 
-  let perPage = 12;
+  let perPage = 8;
   let page = req.query.page || 1;
 
   const locals = {
@@ -22,8 +22,8 @@ const mongoose = require("mongoose");
       { $match: { user: new mongoose.Types.ObjectId(req.user.id) } },
       {
         $project: {
-          title: { $substr: ["$title", 0, 30] },
-          body: { $substr: ["$body", 0, 100] },
+          title: { $substr: ["$title", 0, 20] },
+          body: { $substr: ["$body", 0, 80] },
         },
       },
     ])
