@@ -3,3 +3,7 @@ npm start
 
 
 -express
+
+https://developers.google.com/calendar/api/guides/create-events#node.js
+https://www.oauth.com/oauth2-servers/signing-in-with-google/verifying-the-user-info/
+https://developers.google.com/identity/protocols/oauth2/policies#secure-response-handling

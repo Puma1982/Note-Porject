@@ -1,0 +1,20 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "features.js",
+  "scripts": {
+    "dev": "nodemon ./src/features.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "googleapis": "^118.0.0",
+    "nodemon": "^2.0.22",
+    "type": "^2.7.2"
+  }
+}
