@@ -13,6 +13,7 @@
         width: 150px;
         height: 150px;
         object-fit: contain;
+        animation: zoom-loop 20s ease-in-out infinite;
       }
       .container-fluid-custom {
         padding-top: 3rem;
@@ -30,7 +31,7 @@
         text-align: left;
       }
       body {
-        color: white;
+        color: whitesmoke;
       }
     </style>
   </head>
@@ -46,9 +47,10 @@
       </p>
       <style>
         .zoom-loop {
-  font-size: 24px;
+  font-size: 50px;
   display: inline-block;
-  animation: zoom-loop 2s ease-in-out infinite;
+  animation: zoom-loop 20s ease-in-out infinite;
+  color:orange;
 }
 
 @keyframes zoom-loop {
