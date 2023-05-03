@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "nodemon ./src/features.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {

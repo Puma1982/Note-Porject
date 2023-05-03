@@ -50,7 +50,7 @@ await calendar.events.insert({
     auth: oauth2Client,
 
     requestBody: {
-      summary: 'I want to test event',
+      summary: 'You are in Haithem Grissander NoteNotes Calendar',
       description: 'Some event that is very very important',
       start: {
         dateTime: dayjs(new Date()).add(1, 'day').toISOString(),
@@ -63,7 +63,7 @@ await calendar.events.insert({
     },
   });
   res.send({
-    msg: 'Done',
+    msg: 'Excellent,Done',
   });
 });
 
@@ -71,5 +71,5 @@ app.listen(PORT, () => {
   console.log('Server started on port', PORT);
 });
 
-/**   const user_info = await axios.get("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=eyJ" + token);
+/** const user_info = await axios.get("https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=eyJ" + token);
   console.log(user_info.data) */
