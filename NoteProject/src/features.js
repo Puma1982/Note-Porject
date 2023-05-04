@@ -5,6 +5,7 @@ dotenv.config({});
 import express from 'express';
 import { google } from 'googleapis';
 import dayjs from 'dayjs';
+import {v4 as uuid} from 'uuid';
 
 const calendar = google.calendar({
   version: 'v3',
@@ -45,9 +46,11 @@ app.get('/google/redirect', async (req, res) => {
 });
 
 app.get('/schedule_event', async (req, res) => {
+
 await calendar.events.insert({
     calendarId: 'primary',
     auth: oauth2Client,
+    conferenceDataVersion : 1,
 
     requestBody: {
       summary: 'You are in Haithem Grissander NoteNotes Calendar',
@@ -60,6 +63,14 @@ await calendar.events.insert({
         dateTime: dayjs(new Date()).add(1, 'day').add(1, "hour").toISOString(),
         timeZone: 'Europe/Stockholm',
       },
+      conferenceData : {
+createRequest : {
+requestId : uuid(),
+},
+      },
+      attendees : [{
+        email : "haithemgrissa@gmail.com"
+      }],
     },
   });
   res.send({
