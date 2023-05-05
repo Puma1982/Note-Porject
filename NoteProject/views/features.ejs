@@ -1,23 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title></title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <form method="POST" action="/bookings">
-        <label for="booking-date">Booking Date:</label>
-        <input type="datetime-local" id="booking-date" name="bookingDate">
-      
-        <label for="booking-time">Booking Time:</label>
-        <input type="time" id="booking-time" name="bookingTime">
-      
-        <label for="reminder-time">Reminder Time:</label>
-        <input type="time" id="reminder-time" name="reminderTime">
-      
-        <button type="submit">Book Now</button>
-      </form>
-</head>
-<body>
-    
-</body>
-</html>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+      /* Add custom styles here */
+      .img-icon {
+  position: absolute;
+  top: 7rem;
+  left: 5rem;
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  animation: zoom-loop 20s ease-in-out infinite;
+}
+
+      .container-fluid-custom {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+      h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      p {
+        font-size: 30px;
+        line-height: 1.5;
+        text-align: left;
+      }
+      body {
+        color:black;
+      }
+    </style>
+    <div class="container-fluid container-fluid-custom">
+      <div class="text-center">
+        <img src="img/logo.png" alt="icon" class="img-icon">
+      </div>
+      <style>
+        .zoom-loop {
+  font-size: 50px;
+  display: inline-block;
+  animation: zoom-loop 20s ease-in-out infinite;
+  color:black;
+}
+
+@keyframes zoom-loop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+      </style>
+
+
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle
+  </head>
+  <body>
