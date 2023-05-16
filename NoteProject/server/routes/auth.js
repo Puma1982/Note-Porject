@@ -1,4 +1,4 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
@@ -35,7 +35,8 @@ passport.use(
   )
 );
 
-// Google Login Route
+// ROUTE GOOGLE LOGIN
+
 router.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["email", "profile"] })
@@ -50,7 +51,8 @@ router.get(
   })
 );
 
-// Route if something goes wrong
+// Something goes wrong
+
 router.get('/login-failure', (req, res) => {
   res.send('Something went wrong...');
 });
@@ -83,7 +85,4 @@ passport.deserializeUser(async (id, done) => {
     done(err, null);
   }
 });
-
-
-
 module.exports = router;
