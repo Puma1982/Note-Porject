@@ -6,7 +6,23 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+/*footer**/
+
+.d-flex {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  border-top: solid #dee2e6;
+}
+
+
+
+
 body {
+  margin-bottom: 100px; /* Add space at the bottom for the fixed footer */
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
   color: var(--bs-primary-rgb);
@@ -18,11 +34,12 @@ body {
   margin: 0 auto -60px;
 }
 .containerrr{
+  max-width: 1600px;
   display: flex;
   width: 100%;
   gap: 10px;
   padding: 10px;
-  max-width: 1600px;
+
 }
 section{
   background-color: pink;

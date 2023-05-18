@@ -1,5 +1,5 @@
 <div class="container-fluid container-fluid-custom pb-5 mb-5">
-<div class="row mb-4">
+  <div class="row mb-4">
     <div class="col">
       <h3>Hi <%= userName %></h3>
     </div>
@@ -12,18 +12,16 @@
     <% if (notes.length > 0) { for(var i=0; i < notes.length; i++) { %>
       <div class="col-sm-3 mb-4">
         <div class="card border-primary" style="min-height: 210px">
-          <a href="/dashboard/item/<%= notes[i]._id %>" class="card-body text-decoration-none">
+          <a href="/dashboard/item/<%= notes[i]._id %>" class="card-body text-decoration-none" style="background-image: url('https://www.onlygfx.com/wp-content/uploads/2020/07/blank-post-it-note-1.png');">
             <h5 class="card-title"><%= notes[i].title %></h5>
             <p class="card-text"><%= notes[i].body %></p>
-            
           </a>
         </div>
       </div>
     <%  }} else { %>
       <div class="row">
         <div class="col mt-md-4">
-       <button href="/dashboard/add" class="btn btn-warning">Start Note</button>
-          </h1>
+          <button href="/dashboard/add" class="btn btn-warning">Start Note</button>
         </div>
       </div>
     <% } %>
@@ -58,7 +56,5 @@
         <% } %>
       </ul>
     </nav>
-
   <% } %>
-
 </div>

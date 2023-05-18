@@ -1,6 +1,41 @@
 :root {
   --primary-clr: 	#a9a264;
 }
+
+/*
+Footer
+**/
+
+
+
+
+
+
+
+
+
+
+/*My Logo**/
+.navbar-brand .img-icon {
+  width: 70px;
+  height: 70px;
+}
+
+/***/
+
+
+
+
+/*Logout Button**/
+.bg-darkgreen {
+  background-color:#198754;
+  color: #fff;
+/*color: #98E4A5;*/
+  /* You can customize other properties like text color, padding, etc. here */
+}
+/***/
+
+
 * {
   margin: 0;
   padding: 0;
