@@ -17,8 +17,13 @@
   padding: 10px 0;
   border-top: solid #dee2e6;
 }
+   
 
-
+/*LogOut button**/
+.btn{
+  background-color: #198754;
+  color: white;
+}
 
 
 body {
@@ -39,7 +44,8 @@ body {
   width: 100%;
   gap: 10px;
   padding: 10px;
-
+  position: relative;
+    top: -50px; /* Adjust this value to move the button down as desired */
 }
 section{
   background-color: pink;
@@ -71,7 +77,7 @@ section{
   padding-left: 10px;
 }
 .option:is(:hover, .active) :where(span, label){
-  color: #4A98F7;
+  color:#198754;
 }
 .option #fill-color{
   cursor: pointer;
@@ -79,7 +85,7 @@ section{
   width: 14px;
 }
 #fill-color:checked ~ label{
-  color: #4A98F7;
+  color: #198754;
 }
 .option #size-slider{
   width: 100%;
@@ -111,7 +117,7 @@ section{
   background-color: #6DD400;
 }
 .colors .option:nth-child(5){
-  background-color: #4A98F7;
+  background-color: #198754;
 }
 .colors .option.selected::before{
   position: absolute;
@@ -154,8 +160,8 @@ section{
   background: #6C757D;
 }
 .buttons .save-img{
-  background: #4A98F7;
-  border: 1px solid #4A98F7;
+  background: #198754;
+  border: 1px solid #198754;
 }
 .drawing-board{
   flex: 1;
@@ -164,4 +170,5 @@ section{
 .drawing-board canvas{
   width: 100%;
   height: 100%;
+  background-color: white;
 }

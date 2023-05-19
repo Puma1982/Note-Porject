@@ -35,7 +35,6 @@ Footer
 }
 /***/
 
-
 * {
   margin: 0;
   padding: 0;
@@ -65,6 +64,7 @@ body {
   height: auto !important;
   height: 100%;
   margin: 0 auto -60px;
+  background: linear-gradient(45deg, #1870ed 10%, #f18f88 50%);
 }
 /*SRC PIC Haithem Grissander https://html.com/attributes/img-src/**/
 .container {
@@ -80,6 +80,7 @@ body {
   background:url("https://html.com/wp-content/uploads/flamingo.webp") no-repeat center / cover;
   background-repeat: no-repeat;
   background-size: cover;
+color: #198754;
 }
 .left {
   width: 60%;
@@ -385,7 +386,7 @@ Sun-Mon-Tue-Wed-Thu-Fri....
 }
 /* add tick in event after */
 .events .event::after {
-  content: "✓";
+  content: "OK";
   position: absolute;
   top: 50%;
   right: 0;
