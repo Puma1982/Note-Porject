@@ -12,7 +12,7 @@ exports.homepage = async (req, res) => {
   });
 }
 /**
- * GET /ABOUT
+ * GET /Calander
  */
  exports.cal = async (req, res) => {
   const locals = {
@@ -37,3 +37,15 @@ exports.paint = async (req, res) => {
     layout: "../views/layouts/paintOutput",
   });
 };
+
+
+/**
+ * GET /HOMEPAGE
+ */
+ exports.about = async (req, res) => {
+  const locals = {
+    title: "About - NoteNotes",
+    description: "Free Note App.",
+  }
+  res.render('about', locals);
+}
