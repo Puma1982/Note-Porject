@@ -14,35 +14,156 @@
         <div class="row">
           <label class="title">Shapes</label>
           <ul class="options">
+
+            <ul class="options">
+              <li class="option tool" id="line">
+                <i class="bi bi-dash-lg line-icon"></i>
+                <span>Line</span>
+              </li>
+            </ul>
+        
+            <style>
+              .option{
+                right: 2.2rem;
+              }
+              .line-icon {
+                display: inline-block;
+                width: 20px;
+                height: 2px;
+                background-color: green;
+                position: relative;
+                right: 2.2rem;
+              }
+            </style>
+            
+
+
+           
+            <!--Rectangle-->
             <li class="option tool" id="rectangle">
-              <img src="icons/rectangle.svg" alt="">
+              <span class="rectangle-icon"></span>
               <span>Rectangle</span>
-            </li>
-            <li class="option tool" id="circle">
-              <img src="icons/circle.svg" alt="">
-              <span>Circle</span>
-            </li>
-            <li class="option tool" id="triangle">
-              <img src="icons/triangle.svg" alt="">
-              <span>Triangle</span>
-            </li>
-            <li class="option">
+          </li>
+        </ul>
+        <style>.rectangle-icon {
+          display: inline-block;
+          width: 20px;
+          height: 10px;
+          background-color: green;
+      }
+      </style>
+
+
+       <!--Circle-->
+       <ul class="options">
+        <li class="option tool" id="circle">
+            <i class="bi bi-circle-fill"></i>
+            <span>Circle</span>
+        </li>
+        <!-- Rest of your list items -->
+    </ul>
+    <style>
+      .bi-circle-fill {
+        display: inline-block;
+        border-radius: 50%;
+        background-color: green;
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+
+
+
+ <!--Triangle-->
+ <style>
+  .triangle-icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 18px solid green;
+  }
+</style>
+<ul class="options">
+  <li class="option tool" id="triangle">
+    <div class="triangle-icon"></div>
+    <span>Triangle</span>
+  </li>
+  <!-- Rest of your list items -->
+</ul>
+
+
+              <div class="option">
               <input type="checkbox" id="fill-color">
               <label for="fill-color">Fill color</label>
-            </li>
-          </ul>
+            </div>
+        </ul>
         </div>
+
         <div class="row">
           <label class="title">Options</label>
           <ul class="options">
-            <li class="option active tool" id="brush">
-              <img src="icons/brush.svg" alt="">
-              <span>Brush</span>
-            </li>
-            <li class="option tool" id="eraser">
-              <img src="icons/eraser.svg" alt="">
-              <span>Eraser</span>
-            </li>
+            
+
+
+          
+            
+  
+            <ul class="options">
+              <li class="option active tool" id="brush">
+                <img src="icons/brush.png" alt="">
+                <span>Brush</span>
+              </li>
+            </ul>
+            
+            <style>
+              .option.tool {
+                color: green;
+                /* Add any additional styles as needed */
+              }
+            
+              .option.tool img {
+                font-size: 24px;
+                width: 24px;
+                height: 24px;
+                /* Add any additional styles as needed */
+              }
+            </style>
+            
+
+
+
+
+
+     <!--Eraser-->
+            
+     <ul class="options">
+      <li class="option tool" id="eraser">
+        <img src="icons/eraser.png" alt="">
+        <span>Eraser</span>
+      </li>
+    </ul>
+    
+    <style>
+      .option.tool {
+        color: green;
+        /* Add any additional styles as needed */
+      }
+    
+      .option.tool img {
+        width: 24px;
+        height: 24px;
+        /* Add any additional styles as needed */
+      }
+    </style>
+    
+
+
+
+
+
+
             <li class="option">
               <input type="range" id="size-slider" min="1" max="30" value="5">
             </li>
@@ -61,8 +182,8 @@
           </ul>
         </div>
         <div class="row buttons">
-          <button class="clear-canvas">Clear Canvas</button>
-          <button class="save-img">Save As Image</button>
+          <button class="clear-canvas">Clear</button>
+          <button class="save-img">Save</button>
         </div>
       </section>
       <section class="drawing-board">

@@ -1,31 +1,13 @@
 :root {
-  --primary-clr: 	#a9a264;
+  --primary-clr: darkgreen;
 }
 
-/*
-Footer
-**/
-
-
-
-
-
-
-
-
-
-
-/*My Logo**/
 .navbar-brand .img-icon {
   width: 70px;
   height: 70px;
 }
 
 /***/
-
-
-
-
 /*Logout Button**/
 .bg-darkgreen {
   background-color:#198754;
@@ -448,7 +430,7 @@ opacity: 0.9;  /*  Element will be 50% transparent */
   max-height: 0;
   overflow: hidden;
   border-radius: 5px;
-  background-color: peru;
+  background-color: rgb(221, 246, 221);
   transform: translateX(-50%);
   transition: max-height 0.5s ease;
 }
@@ -628,4 +610,5 @@ opacity: 0.9;  /*  Element will be 50% transparent */
 /*The querySelector method in JavaScript uses CSS selector syntax to select elements from the DOM 
 (Document Object Model). It accepts any valid CSS selector, including class selectors 
 (preceded by a dot), ID selectors (preceded by a hash #), element selectors, attribute 
-selectors, etc.**/
+selectors, etc    /**#a9a264*/
+/*My Logo**/

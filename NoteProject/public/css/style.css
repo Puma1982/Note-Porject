@@ -13,7 +13,7 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #f8f9fa;
+  background-color: pink;;
   padding: 10px 0;
   border-top: solid #dee2e6;
 }
@@ -46,6 +46,7 @@ body {
   padding: 10px;
   position: relative;
     top: -50px; /* Adjust this value to move the button down as desired */
+    background-color: pink;
 }
 section{
   background-color: pink;
@@ -104,12 +105,13 @@ section{
   position: relative;
 }
 .colors .option:nth-child(1){
-  background-color: #fff;
-  border: 1px solid #bfbfbf;
-}
-.colors .option:nth-child(2){
   background-color: #000;
 }
+.colors .option:nth-child(2){
+  background-color: #FFFF00;
+  border: 1px solid #bfbfbf;
+}
+
 .colors .option:nth-child(3){
   background-color: #E02020;
 }
@@ -117,7 +119,7 @@ section{
   background-color: #6DD400;
 }
 .colors .option:nth-child(5){
-  background-color: #198754;
+  background-color: #f8fbfa;
 }
 .colors .option.selected::before{
   position: absolute;
@@ -139,30 +141,42 @@ section{
   cursor: pointer;
 }
 .buttons button{
-  width: 100%;
-  color: #fff;
+  width: 50%;
+  color: rgb(255, 255, 255);
   border: none;
   outline: none;
-  padding: 11px 0;
+  padding: 7px 0;
   font-size: 0.9rem;
-  margin-bottom: 13px;
+  margin-bottom: 7px;
   background: none;
   border-radius: 4px;
   cursor: pointer;
 }
+
+/*Delete btn**/
 .buttons .clear-canvas{
-  color: #6C757D;
+  color: #fff;
   border: 1px solid #6C757D;
+  background-color: #0784f0;
   transition: all 0.3s ease;
 }
 .clear-canvas:hover{
   color: #fff;
-  background: #6C757D;
+  background-color: rgb(136, 136, 3);
 }
+/***/
+
+/*SAVE IMG BTN**/
 .buttons .save-img{
   background: #198754;
   border: 1px solid #198754;
 }
+.save-img:hover{
+  color: #fff;
+  background-color: yellowgreen;
+}
+/***/
+
 .drawing-board{
   flex: 1;
   overflow: hidden;

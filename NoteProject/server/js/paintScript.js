@@ -1,27 +1,40 @@
-const canvas = document.querySelector("canvas"),
-toolBtns = document.querySelectorAll(".tool"),
-fillColor = document.querySelector("#fill-color"),
+const canvas = document.querySelector("canvas"), 
+//<canvas>` element found in the HTML document using the `querySelector` method.
+toolBtns = document.querySelectorAll(".tool"),  
+//stores all elements with the class "tool" in a NodeList. It uses the `querySelectorAll` method.
+fillColor = document.querySelector("#fill-color"), 
+//selects and stores the element with the ID "fill-color" in a variable named `fillColor`.
 sizeSlider = document.querySelector("#size-slider"),
+//selects and stores the element with the ID "size-slider" in a variable named `sizeSlider`.
 colorBtns = document.querySelectorAll(".colors .option"),
+//selects and stores all elements with the class "option" within the "colors" class in a NodeList. It uses the `querySelectorAll` method
 colorPicker = document.querySelector("#color-picker"),
+//selects and stores the element with the ID "color-picker" in a variable named `colorPicker`.
 clearCanvas = document.querySelector(".clear-canvas"),
+//selects and stores the element with the class "clear-canvas" in a variable named `clearCanvas`.
 saveImg = document.querySelector(".save-img"),
+//selects and stores the element with the class "save-img" in a variable named `saveImg`.
 ctx = canvas.getContext("2d");
+//accesses the 2D rendering context of the canvas element and stores it in a variable named `ctx`. The 2D context allows for drawing and manipulating the canvas content.
 
 // global variables with default value
-let prevMouseX, prevMouseY, snapshot,
+let prevMouseX, prevMouseY, snapshot,     // `prevMouseX` and `prevMouseY`: These variables will store the previous mouse coordinates when drawing on the canvas. They are used to track the movement of the mouse for drawing lines or shapes.
+// `snapshot`: This variable can be used to store a snapshot of the canvas at a specific point in time. It might be used, for example, to save a state of the canvas before applying transformations or to undo/redo changes.
 isDrawing = false,
+//`isDrawing`: This boolean variable indicates whether the user is currently drawing on the canvas. It is initially set to `false` and will be updated based on user actions.
 selectedTool = "brush",
-brushWidth = 5,
-selectedColor = "#000";
+//This variable stores the currently selected tool for drawing. It is initially set to "brush" and can be changed to other values depending on the available tools.
+brushWidth = 1,
+//initially set to 1 pixel
+selectedColor = "#696969";
 
-const setCanvasBackground = () => {
-    // setting whole canvas background to white, so the downloaded img background will be white
+/*const setCanvasBackground = () => {
+    // Canvas background white.
     ctx.fillStyle = "#fff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillRect(10, 10, canvas.width, canvas.height);
     ctx.fillStyle = selectedColor; // setting fillstyle back to the selectedColor, it'll be the brush color
 }
-
+*/
 window.addEventListener("load", () => {
     // setting canvas width/height.. offsetwidth/height returns viewable width/height of an element
     canvas.width = canvas.offsetWidth;
@@ -55,6 +68,17 @@ const drawTriangle = (e) => {
     fillColor.checked ? ctx.fill() : ctx.stroke(); // if fillColor is checked fill triangle else draw border
 }
 
+
+//Line
+const drawLine = (e) => {
+    ctx.beginPath(); // Start a new path
+    ctx.moveTo(prevMouseX, prevMouseY); // Move to the starting point
+    ctx.lineTo(e.offsetX, e.offsetY); // Draw a line to the current mouse position
+    ctx.stroke(); // Stroke the line to make it visible
+  };
+  
+
+
 const startDraw = (e) => {
     isDrawing = true;
     prevMouseX = e.offsetX; // passing current mouseX position as prevMouseX value
@@ -68,23 +92,28 @@ const startDraw = (e) => {
 }
 
 const drawing = (e) => {
-    if(!isDrawing) return; // if isDrawing is false return from here
-    ctx.putImageData(snapshot, 0, 0); // adding copied canvas data on to this canvas
-
-    if(selectedTool === "brush" || selectedTool === "eraser") {
-        // if selected tool is eraser then set strokeStyle to white 
-        // to paint white color on to the existing canvas content else set the stroke color to selected color
-        ctx.strokeStyle = selectedTool === "eraser" ? "#fff" : selectedColor;
-        ctx.lineTo(e.offsetX, e.offsetY); // creating line according to the mouse pointer
-        ctx.stroke(); // drawing/filling line with color
-    } else if(selectedTool === "rectangle"){
-        drawRect(e);
-    } else if(selectedTool === "circle"){
-        drawCircle(e);
-    } else {
-        drawTriangle(e);
+    if (!isDrawing) return; // If isDrawing is false, return from the function
+    ctx.putImageData(snapshot, 0, 0); // Restore the copied canvas data
+  
+    if (selectedTool === "brush" || selectedTool === "eraser") {
+      ctx.strokeStyle = selectedTool === "eraser" ? "#fff" : selectedColor;
+      ctx.lineTo(e.offsetX, e.offsetY); // Create a line according to the mouse pointer
+      ctx.stroke(); // Draw the line
+    } else if (selectedTool === "rectangle") {
+      drawRect(e);
+    } else if (selectedTool === "circle") {
+      drawCircle(e);
+    } else if (selectedTool === "triangle") {
+      drawTriangle(e);
+    } else if (selectedTool === "line") {
+      ctx.strokeStyle = selectedColor;
+      ctx.beginPath();
+      ctx.moveTo(prevMouseX, prevMouseY); // Move to the starting point
+      ctx.lineTo(e.offsetX, e.offsetY); // Draw a line to the current mouse position
+      ctx.stroke(); // Stroke the line
     }
-}
+  };
+  
 
 toolBtns.forEach(btn => {
     btn.addEventListener("click", () => { // adding click event to all tool option
