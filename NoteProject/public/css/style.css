@@ -102,7 +102,8 @@ section{
   width: 20px;
   border-radius: 50%;
   margin-top: 3px;
-  position: relative;
+  position: center;
+  
 }
 .colors .option:nth-child(1){
   background-color: #000;
