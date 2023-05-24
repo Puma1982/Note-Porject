@@ -6,7 +6,7 @@ const expressLayouts = require("express-ejs-layouts");
 /* Override method for update Notes */
 const methodOverride = require("method-override");
 
-/* import DB file */
+/* import DB file  from config folder*/
 const connectDB = require("./server/config/db");
 
 /* Starting session for Authenticating/passport/MongoStore */
@@ -36,13 +36,13 @@ app.use(express.json());
 const path = require("path");
 app.use("/static", express.static(path.join(__dirname, "public")));
 
-/* static file for JS */
+/* Route for all the files wish inside js folder */
 app.use("*/js", express.static(path.join(__dirname + "/server/js/")));
 
 /* using the PUT & PAT method, override */
 app.use(methodOverride("_method"));
 
-/* start to connect the DB */
+/* start to connect the DataBase */
 connectDB();
 /* Passport initialization for Oauth */
 app.use(passport.initialize());

@@ -1,6 +1,6 @@
  // it selects an HTML element with the class name "calendar" and assigns it to a variable named calendar.
  const calendar = document.querySelector(".calendar"),
-  date = document.querySelector(".date"),
+  date = document.querySelector(".date"),//date = document.querySelector(".date"): This line selects an HTML element with the class name "date" and assigns it to the variable date. This element is used to display the current date within the calendar.
   daysContainer = document.querySelector(".days"),
   prev = document.querySelector(".prev"),
   next = document.querySelector(".next"),
@@ -96,7 +96,7 @@ function initCalendar() {
   for (let j = 1; j <= nextDays; j++) {
     days += `<div class="day next-date">${j}</div>`;
   }
-  daysContainer.innerHTML = days;
+  daysContainer.innerHTML = days; //The innerHTML property is used to get or set the HTML content within an element. In this case, it is assigning the value of the days variable to the HTML content of the daysContainer element.
   addListner();
 }
 

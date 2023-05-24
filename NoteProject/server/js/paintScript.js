@@ -17,6 +17,17 @@ saveImg = document.querySelector(".save-img"),
 ctx = canvas.getContext("2d");
 //accesses the 2D rendering context of the canvas element and stores it in a variable named `ctx`. The 2D context allows for drawing and manipulating the canvas content.
 
+
+
+//definetion Canvas Background 
+function setCanvasBackground(color) {
+  canvas.style.background = color;
+}
+
+
+
+
+
 // global variables with default value
 let prevMouseX, prevMouseY, snapshot,     // `prevMouseX` and `prevMouseY`: These variables will store the previous mouse coordinates when drawing on the canvas. They are used to track the movement of the mouse for drawing lines or shapes.
 // `snapshot`: This variable can be used to store a snapshot of the canvas at a specific point in time. It might be used, for example, to save a state of the canvas before applying transformations or to undo/redo changes.
@@ -61,10 +72,9 @@ const drawCircle = (e) => {
 }
 //text
 
-
-const text = (e) => {
-  const canvas = document.getElementById("canvas");
-  const ctx = canvas.getContext("2d");
+/*const text = (e) => {
+  const canvas = document.getElementById('myCanvas');
+  const ctx = canvas.getContext('2d');
 
   // Set the font style and size
   ctx.font = "20px Arial";
@@ -82,9 +92,26 @@ const text = (e) => {
   const x = e.clientX - canvas.offsetLeft;
   const y = e.clientY - canvas.offsetTop;
 
-  // Write the text on the canvas
-  ctx.fillText("Hello, World!", x, y);
+  // Prompt the user for input
+  const userInput = prompt("Enter a letter:");
+
+  // Write the user input on the canvas
+  ctx.fillText(userInput, x, y);
 };
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Usage example
 canvas.addEventListener("click", text);
@@ -239,3 +266,7 @@ canvas.addEventListener("mouseup", () => isDrawing = false);
 
 
 
+/**The Pythagorean theorem a2+b2=c2
+let radius = Math.sqrt(Math.pow((prevMouseX - e.offsetX), 2) + Math.pow((prevMouseY - e.offsetY), 2))
+ * ;: This line calculates the radius of the circle based on the distance between the
+ *  previous mouse position (prevMouseX and prevMouseY) and the current mouse position (e.offsetX and e.offsetY). It uses the Pythagorean theorem to calculate the distance between two points. **/
